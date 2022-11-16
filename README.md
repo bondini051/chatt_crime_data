@@ -10,6 +10,15 @@ The purpose of the project is to analyze police data in Chattanooga especially v
 In order to pull the data that isn't throttled you will have to get your own API Token. The above URL will walk you through how to get the token. 
 The data can also be pulled in a csv file.  
 
+## Steps
+Open cpd_datapull_api.ipynb. You will need an API token which you can obtain above using the chattadata.org site.
+Once you add your token, run the code. Once this is run it should save down the data as a csv file to your local
+
+This data will hold the past 2 calendar year data. This YTD and last year.  You can check within this notebook to make sure the min/max dates are correct. 
+You can change the date range as you want.  If you want to pull all the data available remove the date filter.
+There is a throttling limit in the url variable limit=5000000. For all records in the dataset there are 491,000 rows.  You may want to increase the limit to 700,000 to 
+make sure you have the ability to get all the rows.
+
 ### Disclaimer
 "The data provided in this public portal/website represents general data of incidents based on the Tennessee Incident Based Reporting System (TIBRS). 
 Incidents involving protected classes (juveniles, domestic abuse victims) by Tennessee law have been removed. Additionally, some incident addresses have been 
